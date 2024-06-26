@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <section class="login">
+      <div class="login_box">
+        <div class="left">
+          <div class="top_link"><a href="/home">Return home</a></div>
+          <div class="contact">
+            <form action="/login" method="post">
+              <h3>로그인</h3>
+              <% if (typeof errorMessage !== 'undefined') { %>
+                <div class="alert alert-danger"><%= errorMessage %></div>
+            <% } %>
+              <input name="username" type="text" placeholder="USERNAME" required>
+              <input name="password" type="password" placeholder="PASSWORD" required>
+              <button id="goregister" type="button" onclick="location.href='/register'">회원가입</button>
+              <button class="submit" type="submit">LET'S GO</button>
+            </form>
+           
+          </div>
+        </div>
+        <div class="right">
+          <div class="right-text">
+            <h2>UNIEL</h2>
+            <h5>자연스러움에서 비롯되는 고급스러움 오직 유니엘에서</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
