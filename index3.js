@@ -112,7 +112,7 @@ app.get("/home", function (req, res) {
 // console.log("Server is listening on port 3000");
 (async () => {
   await sequelize.sync({ force: false }); // 개발 단계에서는 { force: true } 옵션으로 테이블을 매번 초기화
-  app.listen(3000, () => {
+  app.listen(3000, "0.0.0.0", () => {
     console.log("Server is listening on port 3000");
   });
 })();
