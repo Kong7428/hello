@@ -84,6 +84,10 @@ app.get("/review", function(req, res) {
   res.render("review"); 
 });
 
+app.get("/mypage", function(req, res) {
+  res.render("mypage"); 
+});
+
 
 app.post("/login", async function (req, res) {
   const { username, password } = req.body;
