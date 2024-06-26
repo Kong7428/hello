@@ -88,6 +88,10 @@ app.get("/review", function(req, res) {
   res.render("review"); 
 });
 
+app.get("/review2", function(req, res) {
+  res.render("review2"); 
+});
+
 app.get("/mypage", function(req, res) {
   res.render("mypage"); 
 });
