@@ -76,6 +76,10 @@ app.get("/login", function (req, res) {
   res.render("login");
 });
 
+app.get("/home2", function (req, res) {
+  res.render("home2");
+});
+
 app.get("/register", function(req, res) {
   res.render("register"); 
 });
@@ -97,7 +101,7 @@ app.post("/login", async function (req, res) {
     const user = await User.findOne({ where: { username, password } });
 
     if (user) {
-      res.redirect("/home");
+      res.redirect("/home2");
     } else {
       res.render("login", { errorMessage: "ID 또는 비밀번호가 틀렸습니다." });
     }
